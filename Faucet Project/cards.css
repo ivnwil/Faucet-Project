@@ -1,0 +1,306 @@
+html {
+    font-size: 16px;
+    background-color: #eff2f5;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navivation Header begin*/
+header{
+  
+  grid-template-columns: 1fr ;
+  font-size: 16px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+nav{
+  display: grid;
+  grid-row: auto;
+  text-align: left;
+  grid-template-areas:
+    "logo  market  stake   news  marketcapof ";
+  
+  
+  min-height: 64px;
+}
+/*dark mode*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/*dark mode end*/
+
+.logo-wrapper{
+  align-items: center;
+  text-align: center;
+  max-height: 2rem;
+}
+
+ .logo {
+   grid-area: logo;
+   font-size: 2rem; 
+   margin-top: .6rem;
+   padding: 10px 0px;
+}
+#market  {
+  grid-area: market;
+  font-size: 1rem; 
+  margin-top: 1.4rem;
+  margin-right: 0px;
+  padding-right: 0px;
+  transition: 0.8s;
+  padding: 10px 0px;
+  
+}
+#news{
+  grid-area: news;
+  font-size: 1rem; 
+  margin-top: 1.4rem;
+  margin-right: 0px;
+  transition: 0.8s;
+  padding: 10px 0px;
+  
+}
+#stake{
+  grid-area: stake;
+  font-size: 1rem; 
+  margin-top: 1.4rem;
+  margin-right: 0px;
+  padding-right: 0px;
+  transition: 0.8s;
+  padding: 10px 0px;
+  
+}
+#moc{
+  grid-area: marketcapof;
+  font-size: 1rem; 
+  margin-top: 1.4rem;
+  margin-right: 0px;
+  padding-right: 0px;
+  transition: 0.8s;
+  padding: 10px 0px;
+  border: black;
+}
+ #market:hover {
+  font-size: 1.5rem;
+  color: blue;
+}
+
+#stake:hover {
+  font-size: 1.5rem;
+  color: blue;
+ 
+}
+#news:hover {
+  
+  font-size: 1.5rem;
+  color: blue;
+
+}
+#moc:hover {
+  font-size: 1.5rem;
+  color: blue;
+ 
+}
+.logo:hover{ 
+  background-color: #eff2f5;
+
+ 
+}
+/*text*/
+h3{
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 10px;
+    color: black;
+}
+ul{
+  justify-content: right;
+  margin-left: 2.6rem;
+  
+}
+ul li{
+  
+  color: black;
+  /* display: block;
+  list-style-position: inside; */
+  text-align: left;
+  
+}
+a{
+    font-size: 16px;
+    color: black;
+    
+    padding-bottom: 10px;
+    padding-right: 1.4rem;
+    padding-left: 0;
+}
+/*images*/
+img{
+  max-width: 250px;
+  max-height: 250px;
+  margin: -50px 0px 0px 0px;
+}
+/*grid creation*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    place-content: center;
+    min-height: 100vh;
+    gap: 1em;
+    
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+    text-decoration: none;
+   
+  }
+  
+
+
+  /*utilities*/
+.text-adjust{
+  margin: -75px 0px 0px 0px;
+}
+  
+
+  /*cards*/
+  .card-container{
+     padding: 10px;
+     font-size: 16px;
+     
+     height: 25rem;
+     width: 15.6rem;
+
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255,.1);
+      
+      
+      
+      text-align: center;
+
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+      transition: 0.8s;
+      border-radius: 10px;
+      
+  }
+  /*
+    .card-container:hover {
+    box-shadow: 0 8px 16px 0 rgb(8, 235, 243);
+    transform: scale(1.01);
+  }
+  */
+  .card-1{
+    
+    grid-column-start: 2;
+    text-align: center;
+  }
+
+  
+
+  .card-2{
+    
+    grid-column-start: 3;
+    
+  }
+  .text-container{
+     padding: 10px;
+     font-size: 16px;
+     display: grid;
+     grid-template-columns: 1fr;
+     height: 25rem;
+     width: 15.6rem;
+     text-align: center;
+     white-space: pre-wrap;
+
+    
+     
+    
+
+  }
+
+  .card-3{
+    overflow: hidden;
+    grid-column-start: 4 ;
+    grid-column-end: 5;
+  }
+
+ 
+/*ID's*/
+
+#bitcoin-card:hover{
+  box-shadow: 0 8px 16px 0 rgb(243, 149, 8);
+  transform: scale(1.02);
+}
+
+#ethereum-card:hover{
+  box-shadow: 0 8px 16px 0 rgb(106, 108, 197);
+  transform: scale(1.02);
+}
+
+#solana-card:hover{
+  box-shadow: 0 8px 16px 0 rgb(97, 226, 205);
+  transform: scale(1.02);
+}
+
